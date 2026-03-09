@@ -1,0 +1,21 @@
+# Wiring Diagram
+
+### STM32F103C6T6 Blue Pill to HW203 SD Card Module
+- **STM32F103C6T6** (Pin 10) -> **HW203** (CS)
+- **STM32F103C6T6** (Pin 11) -> **HW203** (MOSI)
+- **STM32F103C6T6** (Pin 12) -> **HW203** (MISO)
+- **STM32F103C6T6** (Pin 13) -> **HW203** (SCK)
+- **HW203** (VCC) -> **STM32F103C6T6** (5V)
+- **HW203** (GND) -> **STM32F103C6T6** (GND)
+
+### STM32F103C6T6 Blue Pill to KTY 84/130 Temperature Sensor
+- **STM32F103C6T6** (Pin A0) -> **Voltage Divider** (output)
+- **Voltage Divider** (R1: 10kΩ) -> **VCC**
+- **Voltage Divider** (R2: 10kΩ) -> **GND**
+- **KTY 84/130** (1) -> **Voltage Divider** (R1)
+- **KTY 84/130** (2) -> **GND**
+
+### Notes
+- Ensure proper connections are made according to the voltage levels.
+- Use appropriate resistors for the voltage divider to ensure accurate readings.
+- Make sure all GNDs are connected together.
